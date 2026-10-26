@@ -39,7 +39,9 @@ def cost_per_class(annual_cost, credits):
     cost_class = ((annual_cost/SEMESTERS_PER_YEAR) / credits) * CS1430_CREDITS / CS1430_MEETINGS_PER_SEMESTER
     return cost_class
 
-
+def cost_per_minute(annual_cost, credits):
+    cost_minute = ((((annual_cost/SEMESTERS_PER_YEAR) / credits) * CS1430_CREDITS )/ CS1430_MEETINGS_PER_SEMESTER) / 50
+    return cost_minute
 # ---- PROGRAM ----
 
 def main():
@@ -54,6 +56,7 @@ def main():
         print("3. Calculate cost per day")
         print("4. Calculate cost per credit")
         print("5. Calculate cost per class")
+        print("6. Calculate cost per minute of class time")
         print("Q. Quit")
         choice = input("Choose an option: ")
 
@@ -72,6 +75,9 @@ def main():
         elif choice == "5":
             cost_per_class(year_cost, credits)
             print(f"Cost per class: ${cost_per_class(year_cost, credits):.2f}")
+        elif choice == "6":
+            cost_per_minute(year_cost, credits)
+            print(f"Cost per minute of class time: ${cost_per_minute(year_cost, credits):.2f}")
         elif choice == "Q":
             break
 
