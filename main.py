@@ -61,22 +61,16 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            cost_per_semester(year_cost)
             print(f"Cost per semester: ${cost_per_semester(year_cost):.2f}")
         elif choice == "2":
-            cost_per_month(year_cost)
             print(f"Cost per month: ${cost_per_month(year_cost):.2f}")
         elif choice == "3":
-            cost_per_day(year_cost)
             print(f"Cost per day: ${cost_per_day(year_cost):.2f}")
         elif choice == "4":
-            cost_per_credit(year_cost, credits)
             print(f"Cost per credit: ${cost_per_credit(year_cost, credits):.2f}")
         elif choice == "5":
-            cost_per_class(year_cost, credits)
             print(f"Cost per class: ${cost_per_class(year_cost, credits):.2f}")
         elif choice == "6":
-            cost_per_minute(year_cost, credits)
             print(f"Cost per minute of class time: ${cost_per_minute(year_cost, credits):.2f}")
         elif choice == "Q":
             break
